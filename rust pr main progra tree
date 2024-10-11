@@ -1,0 +1,19 @@
+
+fn main() {
+    let h = 10;
+    for i in 0..h{
+    for _ in 0..(h - i - 1){
+        print!(" ");
+    }
+    for _ in 0..(2 * i + 1){
+        print!("*");
+    }
+    println!();
+    for _ in 0..(h - 2){
+        print!(" ");
+        
+    }
+        println!("||");
+    }
+    }
+    
