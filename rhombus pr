@@ -1,0 +1,18 @@
+const SIZE: usize = 5;
+
+fn main() {
+    let mut rhombus = String::new();
+
+    for i in 0..SIZE {
+        rhombus.push_str(&" ".repeat(SIZE - i - 1)); 
+        rhombus.push_str(&"*".repeat(2 * i + 1)); 
+        rhombus.push('\n'); 
+    }
+    for i in (0..SIZE - 1).rev() {
+        rhombus.push_str(&" ".repeat(SIZE - i - 1));
+        rhombus.push_str(&"*".repeat(2 * i + 1));
+        rhombus.push('\n');
+    }
+    print!("{}", rhombus);
+    println!();
+}
