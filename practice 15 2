@@ -1,0 +1,49 @@
+1. calculate_variables
+   - Опис: Ця функція обчислює та повертає кортеж з символів, що представляють змінні m, u, x, a, s, l, o, та n. Кожна змінна ініціалізується певним символом.
+
+2. count_solutions
+   - Опис: Ця функція обчислює та повертає кількість можливих розв'язків для задачі. На даний момент повертає фіксоване значення.
+
+Сигнатура функцій
+
+- calculate_variables:
+  fn calculate_variables() -> (char, char, char, char, char, char, char, char)
+
+- count_solutions:
+  fn count_solutions() -> usize
+
+Тест-кейси
+
+Ось тест-кейси для цих функцій:
+
+```
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_calculate_variables() {
+        let (m, u, x, a, s, l, o, n) = calculate_variables();
+        assert_eq!(m, 'm');
+        assert_eq!(u, 'u');
+        assert_eq!(x, 'x');
+        assert_eq!(a, 'a');
+        assert_eq!(s, 's');
+        assert_eq!(l, 'l');
+        assert_eq!(o, 'o');
+        assert_eq!(n, 'n');
+    }
+
+    #[test]
+    fn test_count_solutions() {
+        let solutions = count_solutions();
+        assert_eq!(solutions, 1);  // Замініть на фактичну кількість рішень, якщо потрібно
+    }
+}
+```
+
+Пояснення тест-кейсів
+
+- test_calculate_variables: Цей тест перевіряє, що функція calculate_variables повертає правильні значення для кожної змінної. Він перевіряє, що кожна змінна відповідає очікуваному символу.
+
+- test_count_solutions: Цей тест перевіряє, що функція count_solutions повертає очікувану кількість рішень. Якщо логіка визначення кількості рішень зміниться, вам слід оновити очікуване значення в цьому тесті.
